@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 2019_11_01_125658) do
     t.string "surname_2"
     t.string "id_document_number"
     t.string "rol"
-    t.bigint "account_id"
     t.boolean "active"
+    t.bigint "account_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["account_id"], name: "fk_rails_61ac11da2b"
+    t.index ["account_id"], name: "index_users_on_account_id"
   end
 
   add_foreign_key "users", "accounts"

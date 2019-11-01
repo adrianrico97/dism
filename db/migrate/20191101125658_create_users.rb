@@ -9,8 +9,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :surname_2
       t.string :id_document_number
       t.string :rol
-      t.bigint :account_id
       t.boolean :active
+      t.belongs_to :account
 
       t.timestamps
     end

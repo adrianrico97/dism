@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  belongs_to :account
+  
   has_secure_password :password, validations: false
 
   validates_presence_of :login, :password_digest, :name, :surname_1, :email, :rol
