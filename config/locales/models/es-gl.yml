@@ -1,0 +1,50 @@
+es-gl:
+  activerecord:
+    errors:
+      messages:
+        model_invalid: "Falló la validación: %{errors}"
+        inclusion: "no est´a incluído en la lista"
+        exclusion: "está reservado"
+        invalid: "no es válido"
+        confirmation: "doesn't match %{attribute}"
+        accepted: "must be accepted"
+        empty: "no puede estar vacio"
+        blank: "no puede estar en blanco"
+        present: "debe estar en blanco"
+        too_long:
+          one: "es muy largo (el máximo es 1 carácter)"
+          other: "es muy largo (el máximo son %{count} caracteres)"
+        too_short:
+          one: "es muy corto (el mínimo es 1 carácter)"
+          other: "es muy corto (el mínimo son %{count} caracteres)"
+        wrong_length:
+          one: "el tamaño es incorrecto (debe tener 1 carácter)"
+          other: "el tamaño es incorrecto (debe tener %{count} caracteres)"
+        not_a_number: "no es un número"
+        not_an_integer: "no es un entero"
+        greater_than: "debe ser mayor que %{count}"
+        greater_than_or_equal_to: "debe ser mayor o igual que %{count}"
+        equal_to: "debe ser igual que %{count}"
+        less_than: "debe ser menor que %{count}"
+        less_than_or_equal_to: "debe ser menor o igual que %{count}"
+        other_than: "debe ser diferente a %{count}"
+        odd: "debe ser impar"
+        even: "debe ser par"
+
+    models:
+      account: "Conta"
+      user: "Usuario"
+
+    attributes:
+      account:
+        description: "Nome da conta"
+      user:
+        login: "Nome de usuario"
+        password_digest: "Contrasinal"
+        email: "Correo electrónico"
+        name: "Nome"
+        surname_1: "1º apelido"
+        surname_2: "2º apelido"
+        id_document_number: "NIF"
+        rol: "Rol"
+        active: "Activo"

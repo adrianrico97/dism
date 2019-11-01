@@ -29,6 +29,12 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+# Necesito esta gema para poder iniciar a consola: https://www.reddit.com/r/rails/comments/akhmae/ruby_26_breaks_rails_console/ejga8un/
+gem 'irb', require: false
+# Esta gema fai que poidamos ver os datos por consola formateados: https://github.com/awesome-print/awesome_print
+gem 'awesome_print'
+# Gema para encriptar os contrasinais
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

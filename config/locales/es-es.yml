@@ -1,2 +1,3 @@
 es-es:
-  hello: "Hola mundo"
+  app_name: "DISM (Device Inventory Simple Manager)"
+  app_name_short: "DISM"
