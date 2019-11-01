@@ -34,6 +34,7 @@ es-es:
     models:
       account: "Cuenta"
       user: "Usuario"
+      program: "Programa"
 
     attributes:
       account:
@@ -48,3 +49,7 @@ es-es:
         id_document_number: "NIF"
         rol: "Rol"
         active: "Activo"
+      program:
+        description: "Descripción"
+        version: "Versión"
+        observations: "Observaciones"
