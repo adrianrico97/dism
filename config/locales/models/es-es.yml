@@ -35,6 +35,7 @@ es-es:
       account: "Cuenta"
       user: "Usuario"
       program: "Programa"
+      brand: "Marca"
 
     attributes:
       account:
@@ -53,3 +54,5 @@ es-es:
         description: "Descripción"
         version: "Versión"
         observations: "Observaciones"
+      brand:
+        description: "Nombre"
