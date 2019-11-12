@@ -9,8 +9,6 @@ class CreateBrands < ActiveRecord::Migration[6.0]
   end
 
   def down
-    remove_foreign_key :brands, :account
-
     drop_table :brands
   end
 end

@@ -36,6 +36,7 @@ en:
       user: "User"
       program: "Program"
       brand: "Brand"
+      model: "Model"
 
     attributes:
       account:
@@ -55,4 +56,6 @@ en:
         version: "Version"
         observations: "Observations"
       brand:
+        description: "Name"
+      model:
         description: "Name"

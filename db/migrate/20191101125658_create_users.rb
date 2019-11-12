@@ -14,13 +14,9 @@ class CreateUsers < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-
-    add_foreign_key :users, :accounts
   end
 
   def down
-    remove_foreign_key :users, :accounts
-
     drop_table :users
   end
 end

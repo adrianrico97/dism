@@ -11,8 +11,6 @@ class CreatePrograms < ActiveRecord::Migration[6.0]
   end
 
   def down
-    remove_foreign_key :programs, :accounts
-
     drop_table :programs
   end
 end
