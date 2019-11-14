@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_12_191820) do
+ActiveRecord::Schema.define(version: 2019_11_12_194042) do
 
-  create_table "accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "description"
     t.bigint "account_id"
     t.datetime "created_at", precision: 6, null: false
@@ -26,7 +26,39 @@ ActiveRecord::Schema.define(version: 2019_11_12_191820) do
     t.index ["account_id"], name: "index_brands_on_account_id"
   end
 
-  create_table "models", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "devices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "description"
+    t.text "observations"
+    t.string "serial_number"
+    t.string "code"
+    t.string "category"
+    t.decimal "price", precision: 10
+    t.date "purchase_date"
+    t.bigint "account_id"
+    t.bigint "model_id"
+    t.bigint "brand_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_devices_on_account_id"
+    t.index ["brand_id"], name: "index_devices_on_brand_id"
+    t.index ["model_id"], name: "index_devices_on_model_id"
+  end
+
+  create_table "devices_programs", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "device_id", null: false
+    t.bigint "program_id", null: false
+  end
+
+  create_table "devices_users_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "device_id"
+    t.bigint "user_id"
+    t.date "assignment_date"
+    t.date "deassignment_date"
+    t.index ["device_id"], name: "index_devices_users_relations_on_device_id"
+    t.index ["user_id"], name: "index_devices_users_relations_on_user_id"
+  end
+
+  create_table "models", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "description"
     t.bigint "brand_id"
     t.datetime "created_at", precision: 6, null: false
@@ -34,7 +66,7 @@ ActiveRecord::Schema.define(version: 2019_11_12_191820) do
     t.index ["brand_id"], name: "index_models_on_brand_id"
   end
 
-  create_table "programs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "programs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "description"
     t.string "version"
     t.text "observations"
@@ -44,7 +76,7 @@ ActiveRecord::Schema.define(version: 2019_11_12_191820) do
     t.index ["account_id"], name: "index_programs_on_account_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "login"
     t.string "password_digest"
     t.string "email"

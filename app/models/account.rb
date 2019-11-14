@@ -2,6 +2,7 @@ class Account < ApplicationRecord
   has_many :users
   has_many :programs
   has_many :brands
+  has_many :devices
 
   has_many :models, through: :brands
 

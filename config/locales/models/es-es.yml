@@ -37,6 +37,7 @@ es-es:
       program: "Programa"
       brand: "Marca"
       model: "Modelo"
+      device: "Dispositivo"
 
     attributes:
       account:
@@ -59,3 +60,11 @@ es-es:
         description: "Nombre"
       model:
         description: "Nombre"
+      device:
+        description: "Descripción"
+        observations: "Observaciones"
+        serial_number: "Número de serie"
+        code: "Código"
+        category: "Categoría"
+        price: "Precio"
+        purchase_date: "Fecha de compra"
