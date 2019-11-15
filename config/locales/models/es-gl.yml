@@ -38,6 +38,7 @@ es-gl:
       brand: "Marca"
       model: "Modelo"
       device: "Dispositivo"
+      issue: "Incidencia"
 
     attributes:
       account:
@@ -68,3 +69,9 @@ es-gl:
         category: "Categoría"
         price: "Prezo"
         purchase_date: "Data de compra"
+      issue:
+        title: Asunto
+        description: "Description"
+        date: "Data"
+        state: "Estado"
+        priority: "Prioridade"

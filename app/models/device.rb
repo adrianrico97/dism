@@ -5,6 +5,7 @@ class Device < ApplicationRecord
 
   has_many :devices_users_relations
   has_many :users, through: :devices_users_relations
+  has_many :issues
 
   has_and_belongs_to_many :programs
 

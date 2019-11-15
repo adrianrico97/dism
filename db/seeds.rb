@@ -29,3 +29,13 @@ device.programs << prog
 device.programs << prog2
 
 device.associate_user(u)
+
+device.issues.create!(
+  :title => "Non funcionan os altofalantes",
+  :description => "Non se escoita o son de ningunha aplicación. Probei con vídeos de YouTube, Spotify...",
+  :date => Date.today,
+  :state => ISSUE_STATES[:open],
+  :priority => ISSUE_PRIORITIES[:normal],
+  :user => u
+)
+

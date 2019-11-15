@@ -38,6 +38,7 @@ en:
       brand: "Brand"
       model: "Model"
       device: "Device"
+      issue: "Issue"
 
     attributes:
       account:
@@ -68,3 +69,9 @@ en:
         category: "Category"
         price: "Price"
         purchase_date: "Purchase date"
+      issue:
+        title: "Title"
+        description: "Description"
+        date: "Date"
+        state: "State"
+        priority: "Priority"
