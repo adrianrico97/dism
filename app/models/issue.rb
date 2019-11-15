@@ -4,6 +4,8 @@ class Issue < ApplicationRecord
 
   has_one :account, through: :device
 
+  has_many :trackings
+
   #########################################
   # SCOPES                                #
   #########################################

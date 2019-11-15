@@ -39,6 +39,7 @@ en:
       model: "Model"
       device: "Device"
       issue: "Issue"
+      tracking: "Tracking"
 
     attributes:
       account:
@@ -75,3 +76,6 @@ en:
         date: "Date"
         state: "State"
         priority: "Priority"
+      tracking:
+        description: "Description"
+        date: "Date"

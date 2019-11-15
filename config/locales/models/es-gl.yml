@@ -39,6 +39,7 @@ es-gl:
       model: "Modelo"
       device: "Dispositivo"
       issue: "Incidencia"
+      tracking: "Seguimento"
 
     attributes:
       account:
@@ -75,3 +76,6 @@ es-gl:
         date: "Data"
         state: "Estado"
         priority: "Prioridade"
+      tracking:
+        description: "Descripción"
+        date: "Data"

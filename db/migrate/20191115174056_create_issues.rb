@@ -3,7 +3,7 @@ class CreateIssues < ActiveRecord::Migration[6.0]
     create_table :issues do |t|
       t.string :title
       t.text :description
-      t.date :date
+      t.datetime :date
       t.string :state
       t.string :priority
       t.belongs_to :device

@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   has_many :devices_users_relations
   has_many :devices, through: :devices_users_relations
+  has_many :issues
+  has_many :trackings
 
   #########################################
   # VALIDACIÓNS                           #
