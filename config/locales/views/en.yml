@@ -1,0 +1,10 @@
+en:
+  common:
+    title: "DISM"
+    footer_text: "DISM (Device Inventory Simple Manager). Project of DAW. IES San Clemente"
+  menu:
+    users: "Users"
+    brands: "Brands"
+    programs: "Programs"
+    devices: "Devices"
+    connected_as: "Connected as"

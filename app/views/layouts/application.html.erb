@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dism</title>
+    <title><%= t('common.title') %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,58 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Menú superior -->
+    <div id="top-menu">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><%= t('menu.users') %></a>
+              <!-- link_to User, users_path -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><%= t('menu.brands') %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><%= t('menu.programs') %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><%= t('menu.devices') %></a>
+            </li>
+          </ul>
+          <div class="row justify-content-center pr-3">
+            <spam> <%= material_icon.person %> </spam>
+            <spam> <%= t('menu.connected_as') %> </spam>
+            <spam class="text-success" >&nbsp; User &nbsp;</spam>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Contedor principal -->
+    <div id="main-container">
+      <div class="row">
+        <div class="col">
+          <!-- Columna libre pola marxe esquerda -->
+        </div>
+        <div class="col-9">
+          <!-- Contido -->
+          <%= yield %>
+        </div>
+        <div class="col">
+          <!-- Columna libre pola marxe dereita -->
+        </div>
+      </div>      
+    <div>
+
+    <!-- Footer -->
+    <div id="bottom-footer">
+      <footer class="alert alert-light fixed-bottom">
+        <div class="text-center py-3">
+          <spam><%= t('common.footer_text') %> </spam>
+        </div>
+      </footer>
+    </div>
+
   </body>
 </html>

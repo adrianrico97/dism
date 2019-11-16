@@ -18,5 +18,12 @@ module Dism
 
     # Engadir todos os ficheiros de configuración do directorio locales
     config.i18n.load_path += Dir[Rails.root.join('config','locales','**','*.{rb,yml}')]
+
+    #TODO revisar estas configuracións
+    # Permitted locales available for the application
+    #I18n.available_locales = [:en, :es_ES, :gl]
+     
+    # Set default locale to something other than :en
+    #I18n.default_locale = :gl
   end
 end

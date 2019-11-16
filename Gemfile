@@ -35,6 +35,10 @@ gem 'irb', require: false
 gem 'awesome_print'
 # Gema para encriptar os contrasinais
 gem 'bcrypt', '~> 3.1.7'
+# Engadimos Bootstrap
+gem 'bootstrap', '~> 4.3.1'
+# Engadimos iconas. https://material.io/resources/icons
+gem 'material_icons', '~> 2.2', '>= 2.2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

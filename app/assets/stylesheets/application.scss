@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+/*
+ * Engadimos Bootstrap. Máis info: https://github.com/twbs/bootstrap-rubygem/blob/master/README.md#a-ruby-on-rails
+ */
+@import "bootstrap";
+@import "material_icons";
+
