@@ -3,11 +3,11 @@ es-ES:
     errors:
       messages:
         model_invalid: "Falló la validación: %{errors}"
-        inclusion: "no est´a incluído en la lista"
+        inclusion: "no está incluído en la lista"
         exclusion: "está reservado"
         invalid: "no es válido"
         confirmation: "doesn't match %{attribute}"
-        accepted: "must be accepted"
+        accepted: "debe ser aceptado"
         empty: "no puede estar vacio"
         blank: "no puede estar en blanco"
         present: "debe estar en blanco"

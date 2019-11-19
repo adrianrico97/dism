@@ -29,9 +29,10 @@
             </li>
           </ul>
           <div class="row justify-content-center pr-3">
-            <spam> <%= material_icon.person %> </spam>
-            <spam> <%= t('menu.connected_as') %> </spam>
-            <spam class="text-success" >&nbsp; User &nbsp;</spam>
+            <spam class="text-success"> <%= material_icon.person %> </spam>
+            <spam class="text-white"> <%= t('menu.connected_as') %> </spam>
+            <spam class="text-white" >&nbsp; <%= current_user.login %> &nbsp;</spam>
+            <span class="text-white">(<%= link_to t('menu.logout'), logout_path %>)</span>
           </div>
         </div>
       </nav>

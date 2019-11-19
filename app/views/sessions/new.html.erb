@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t('common.title') %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Login container -->
+    <div id="login-container" class="container h-100 mt-5">
+      <h1 class="text-center"><%= t('login.title') %></h1><br />
+      <!-- Show errors -->
+      <% if alert.present? %>
+        <div class="alert alert-danger" role="alert">
+          <p><%= alert %></p>
+        </div>
+      <% end %>
+      <!-- Login form -->
+      <div class="row h-100 justify-content-center align-items-center">
+        <%= form_tag sessions_path do |form| %>
+          <div class="form-group">
+            <%= label_tag :email, t('login.user') %>
+            <%= text_field_tag :email, nil, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= label_tag :password, t('login.password') %>
+            <%= password_field_tag :password, nil, class: 'form-control' %>
+          </div> 
+          <div class="form-group">
+            <%= submit_tag t('login.login'), class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="bottom-footer">
+      <footer class="alert alert-light fixed-bottom">
+        <div class="text-center py-3">
+          <spam><%= t('common.footer_text') %> </spam>
+        </div>
+      </footer>
+    </div>
+
+  </body>
+</html>

@@ -2,12 +2,19 @@ es-ES:
   common:
     title: "DISM"
     footer_text: "DISM (Device Inventory Simple Manager). Proyecto de DAW. IES San Clemente"
+  login:
+    title: "Inicio de sesión"
+    user_password_invalid: "Usuario o contraseña no son válidos"
+    user: "Usuario"
+    password: "Contraseña"
+    login: "Entrar"
   menu:
     users: "Usuarios"
     brands: "Marcas"
     programs: "Programas"
     devices: "Dispositivos"
     connected_as: "Conectado como"
+    logout: "Salir"
   new_account:
     title: "Nueva cuenta"
     explanation: "Crea una nueva cuenta y un usuario administrador"
@@ -20,7 +27,7 @@ es-ES:
     surname_1: "Apellido 1"
     surname_2: "Apellido 2"
     id_document_number: "NIF"
-  options:
+  actions:
     new: "Nuevo"
     edit: "Editar"
     delete: "Eliminar"

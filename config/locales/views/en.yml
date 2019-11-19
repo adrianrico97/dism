@@ -2,12 +2,19 @@ en:
   common:
     title: "DISM"
     footer_text: "DISM (Device Inventory Simple Manager). Project of DAW. IES San Clemente"
+  login:
+    title: "Login"
+    user_password_invalid: "Email or password is invalid"
+    user: "User"
+    password: "Password"
+    login: "Login"
   menu:
     users: "Users"
     brands: "Brands"
     programs: "Programs"
     devices: "Devices"
     connected_as: "Connected as"
+    logout: "Logout"
   new_account:
     title: "New account"
     explanation: "You going to create a new account and a admin user."

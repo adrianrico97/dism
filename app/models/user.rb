@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   #########################################
   # VALIDACIÓNS                           #
-  #########################################  
+  #########################################
   has_secure_password :password, validations: false
 
   validates_presence_of :login, :password_digest, :name, :surname_1, :email, :rol
@@ -17,11 +17,20 @@ class User < ApplicationRecord
   validates :rol, inclusion: ROLES.values
 
   #########################################
+  # CALLBACKS                             #
+  #########################################
+  before_create do |user|
+    user.active ||= true
+    user.locale ||= I18n.default_locale
+  end
+
+  #########################################
   # MËTODOS DE INSTANCIA                  #
   #########################################
   def active_devices
     devices_users_relations.select{|x| x.active? }.map(&:device)
   end
+
 
   def full_name
     [name, surname_1, surname_2].join(" ")
