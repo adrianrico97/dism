@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t('common.title') %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- New account container -->
+    <div id="new-account-container" class="container h-100 mt-5" style="margin-bottom: 100px;">
+      <h1 class="text-center"><%= t('new_account.title') %></h1>
+      <div class="alert alert-light" role="alert">
+        <p class="text-center"><%= t('new_account.explanation') %></p>
+      </div>
+      <!-- Show errors -->
+      <% if alert.present? %>
+        <div class="alert alert-danger" role="alert">
+          <p><%= alert %></p>
+        </div>
+      <% end %>
+      <!-- New account form -->
+      <div class="row h-100 justify-content-center align-items-center">
+        <%= form_tag accounts_path do |form| %>
+          <div class="row">
+            <div class="col-md">
+              <div class="form-group">
+                <%= label_tag :description, t('new_account.description') %>
+                <%= text_field_tag :description, params[:description], class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= label_tag :username, t('new_account.username') %>
+                <%= text_field_tag :username, params[:username], class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= label_tag :password, t('new_account.password') %>
+                <%= password_field_tag :password, nil, class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= label_tag :email, t('new_account.email') %>
+                <%= text_field_tag :email, params[:email], class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-group">
+                <%= label_tag :name, t('new_account.name') %>
+                <%= text_field_tag :name, params[:name], class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= label_tag :surname_1, t('new_account.surname_1') %>
+                <%= text_field_tag :surname_1, params[:surname_1], class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= label_tag :surname_2, t('new_account.surname_2') %>
+                <%= text_field_tag :surname_2, params[:surname_2], class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= label_tag :id_document_number, t('new_account.id_document_number') %>
+                <%= text_field_tag :id_document_number, params[:id_document_number], class: 'form-control' %>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="mx-auto" style="width: 75px;">
+              <%= submit_tag t('new_account.create'), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="bottom-footer">
+      <footer class="alert alert-light">
+        <div class="text-center py-3">
+          <spam><%= t('common.footer_text') %> </spam>
+        </div>
+      </footer>
+    </div>
+
+  </body>
+</html>
