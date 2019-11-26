@@ -20,3 +20,14 @@ gl:
     surname_1: "Apelido 1"
     surname_2: "Apelido 2"
     id_document_number: "NIF"
+  options:
+    new: "Novo"
+    edit: "Editar"
+    delete: "Eliminar"
+    activate: "Activar"
+    deactivate: "Desactivar"
+    save: "Gardar"
+    update: "Actualizar"
+    create: "Crear"
+  users:
+    new: "Novo usuario"

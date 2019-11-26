@@ -20,3 +20,14 @@ en:
     surname_1: "Surname 1"
     surname_2: "Surname 2"
     id_document_number: "ID card number"
+  actions:
+    new: "New"
+    edit: "Edit"
+    delete: "Delete"
+    activate: "Activate"
+    deactivate: "Deactivate"
+    save: "Save"
+    update: "Update"
+    create: "Create"
+  users:
+    new: "New user"

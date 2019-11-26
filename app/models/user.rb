@@ -23,4 +23,8 @@ class User < ApplicationRecord
     devices_users_relations.select{|x| x.active? }.map(&:device)
   end
 
+  def full_name
+    [name, surname_1, surname_2].join(" ")
+  end
+
 end

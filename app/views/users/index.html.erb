@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <!-- Listado usuarios -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"><%= User.human_attribute_name('login') %></th>
+            <th scope="col"><%= User.human_attribute_name('email') %></th>
+            <th scope="col"><%= User.human_attribute_name('name') %></th>
+            <th scope="col"><%= User.human_attribute_name('active') %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= link_to user.login, user %> </td>
+              <td><%= link_to user.email, user %> </td>
+              <td><%= link_to user.full_name, user %> </td>
+              <td><%=(user.active? ? material_icon.done : material_icon.clear )%></td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+       <!-- Fin listado usuarios -->
+    </div>
+    <div class="col-3">
+      <!-- Menú lateral -->
+      <div class="mx-auto" style="width: 82px;">
+        <%= button_to t('actions.new'), new_user_path, method: :get, class: 'btn btn-primary' %>
+      </div>
+      <!-- Fin menú lateral -->
+    </div>
+  </div>
+</div>

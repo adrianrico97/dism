@@ -16,8 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#"><%= t('menu.users') %></a>
-              <!-- link_to User, users_path -->
+              <%= link_to t('menu.users'), users_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><%= t('menu.brands') %></a>
@@ -40,7 +39,7 @@
 
     <!-- Contedor principal -->
     <div id="main-container">
-      <div class="row">
+      <div class="row pt-4">
         <div class="col">
           <!-- Columna libre pola marxe esquerda -->
         </div>
@@ -55,8 +54,9 @@
     <div>
 
     <!-- Footer -->
-    <div id="bottom-footer">
-      <footer class="alert alert-light fixed-bottom">
+    <div id="bottom-footer" class="pt-5">
+      <!--<footer class="alert alert-light fixed-bottom">-->
+      <footer class="alert alert-light">
         <div class="text-center py-3">
           <spam><%= t('common.footer_text') %> </spam>
         </div>

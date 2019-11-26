@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <!-- Datos -->
+      <h1><%= @user.full_name %></h1>
+      <dl>
+        <dt><%= User.human_attribute_name('login') %></dt>
+        <dd><%= @user.login %></dd>
+        <dt><%= User.human_attribute_name('email') %></dt>
+        <dd><%= @user.email %></dd>
+        <dt><%= User.human_attribute_name('name') %></dt>
+        <dd><%= @user.name %></dd>
+        <dt><%= User.human_attribute_name('surname_1') %></dt>
+        <dd><%= @user.surname_1 %></dd>
+        <dt><%= User.human_attribute_name('surname_2') %></dt>
+        <dd><%= @user.surname_2 %></dd>
+        <dt><%= User.human_attribute_name('id_document_number') %></dt>
+        <dd><%= @user.id_document_number %></dd>
+        <dt><%= User.human_attribute_name('rol') %></dt>
+        <dd><%= t("global_constants.roles.#{@user.rol}") %></dd>
+      </dl>
+      <!-- Fin datos -->
+    </div>
+    <div class="col-3">
+      <!-- Menú lateral -->
+      <div class="mx-auto">
+        <%= button_to t('actions.edit'), edit_user_path, method: :get, class: 'btn btn-primary' %>
+        <br />
+        <%= button_to (@user.active? ? t('actions.deactivate') : t('actions.activate')), (@user.active? ? deactivate_user_path : activate_user_path), class: 'btn btn-primary' %>
+      </div>
+      <!-- Fin menú lateral -->
+    </div>
+  </div>
+</div>

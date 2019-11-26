@@ -20,3 +20,14 @@ es-ES:
     surname_1: "Apellido 1"
     surname_2: "Apellido 2"
     id_document_number: "NIF"
+  options:
+    new: "Nuevo"
+    edit: "Editar"
+    delete: "Eliminar"
+    activate: "Activar"
+    deactivate: "Desactivar"
+    save: "Guardar"
+    update: "Actualizar"
+    create: "Crear"
+  users:
+    new: "Nuevo usuario"

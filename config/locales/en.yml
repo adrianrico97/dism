@@ -32,3 +32,18 @@
 en:
   app_name: "DISM (Device Inventory Simple Manager)"
   app_name_short: "DISM"
+  global_constants:
+    roles:
+      admin: "Admin user"
+      basic: "Basic user"
+    categories:
+      computer: "Computer"
+      phone: "Mobile phone"
+    issue_states:
+      open: "Open"
+      in_progress: "In progress"
+      closed: "Closed"
+    issue_priorities:
+      low: "Low"
+      normal: "Normal"
+      high: "High"

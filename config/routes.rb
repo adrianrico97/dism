@@ -4,4 +4,12 @@ Rails.application.routes.draw do
 
   resources :home
   resources :accounts, only: [:new, :create]
+  resources :users
+  resources :users do
+    member do
+      post :activate
+      post :deactivate
+    end
+  end
+
 end
