@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <!-- Datos -->
+      <h1><%= @brand.display_name %></h1>
+      <dl>
+        <dt><%= Brand.human_attribute_name('description') %></dt>
+        <dd><%= @brand.description %></dd>
+      </dl>
+      <!-- Listado de modelos -->
+      <div>
+        
+      </div>
+      <!-- Finde de listado de modelos -->
+      <!-- Fin datos -->
+    </div>
+    <div class="col-3">
+      <!-- Menú lateral -->
+      <div class="mx-auto">
+        <%= button_to t('actions.edit'), edit_brand_path, method: :get, class: 'btn btn-primary' %>
+        <br />
+        <%= button_to t('actions.delete'), brand_path, method: :delete, class: 'btn btn-primary' %>
+      </div>
+      <!-- Fin menú lateral -->
+    </div>
+  </div>
+</div>

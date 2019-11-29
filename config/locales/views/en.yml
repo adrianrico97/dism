@@ -9,6 +9,7 @@ en:
     password: "Password"
     login: "Login"
   menu:
+    home: "Home"
     users: "Users"
     brands: "Brands"
     programs: "Programs"
@@ -38,3 +39,6 @@ en:
     create: "Create"
   users:
     new: "New user"
+  brands:
+    new: "New brand"
+    models_count: "Number of models"

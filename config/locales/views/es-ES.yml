@@ -9,6 +9,7 @@ es-ES:
     password: "Contraseña"
     login: "Entrar"
   menu:
+    home: "Inicio"
     users: "Usuarios"
     brands: "Marcas"
     programs: "Programas"
@@ -38,3 +39,6 @@ es-ES:
     create: "Crear"
   users:
     new: "Nuevo usuario"
+  brands:
+    new: "Nueva marca"
+    models_count: "Número de modelos"

@@ -9,6 +9,7 @@ gl:
     password: "Contrasinal"
     login: "Entrar"
   menu:
+    home: "Inicio"
     users: "Usuarios"
     brands: "Marcas"
     programs: "Programas"
@@ -38,3 +39,6 @@ gl:
     create: "Crear"
   users:
     new: "Novo usuario"
+  brands:
+    new: "Nova marca"
+    models_count: "Número de modelos"

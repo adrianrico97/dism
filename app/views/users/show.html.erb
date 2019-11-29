@@ -26,7 +26,9 @@
       <div class="mx-auto">
         <%= button_to t('actions.edit'), edit_user_path, method: :get, class: 'btn btn-primary' %>
         <br />
-        <%= button_to (@user.active? ? t('actions.deactivate') : t('actions.activate')), (@user.active? ? deactivate_user_path : activate_user_path), class: 'btn btn-primary' %>
+        <% unless @user == current_user %>
+          <%= button_to (@user.active? ? t('actions.deactivate') : t('actions.activate')), (@user.active? ? deactivate_user_path : activate_user_path), class: 'btn btn-primary' %>
+        <%end%>
       </div>
       <!-- Fin menú lateral -->
     </div>

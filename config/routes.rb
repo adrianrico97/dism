@@ -17,5 +17,6 @@ Rails.application.routes.draw do
       post :deactivate
     end
   end
+  resources :brands
 
 end

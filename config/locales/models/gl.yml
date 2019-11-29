@@ -30,6 +30,7 @@ gl:
         other_than: "debe ser diferente a %{count}"
         odd: "debe ser impar"
         even: "debe ser par"
+        taken: "xa está en uso"
 
     models:
       account: "Conta"
