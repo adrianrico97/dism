@@ -1,16 +1,7 @@
 <div class="pt-4">
   <%= form_for @user do |f| %>
     <!-- Mostrar erros -->
-    <% if @user.errors.any? %>
-      <div class="alert alert-danger" role="alert">
-        <h2><%= pluralize(@user.errors.count, "error") %></h2>
-        <ul>
-          <% @user.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+    <%= render 'common/show_errors', :object => @user %>
     <!-- Formulario -->
     <div class="h-100 justify-content-center align-items-center">
       <div class="row">
@@ -48,6 +39,10 @@
           <div class="form-group">
             <%= f.label :rol %><br>
             <%= f.select("rol", ROLES.collect {|c,v| [ t("global_constants.roles.#{v}"), c ] }, {}, { :class => 'form-control' } ) %>
+          </div>
+          <div class="form-group">
+            <%= f.label :locale %><br>
+            <%= f.select("locale", AVAILABLE_LOCALES.collect {|c,v| [ t("global_constants.available_locales.#{v}"), v ] }, {}, { :class => 'form-control' } ) %>
           </div>
         </div>
       </div>

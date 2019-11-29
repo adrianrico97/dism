@@ -2,6 +2,7 @@ gl:
   common:
     title: "DISM"
     footer_text: "DISM (Device Inventory Simple Manager). Proxecto de DAW. IES San Clemente"
+    error: "erro"
   login:
     title: "Inicio de sesión"
     user_password_invalid: "Usuario ou contrasinal non son válidos"
@@ -37,8 +38,12 @@ gl:
     save: "Gardar"
     update: "Actualizar"
     create: "Crear"
+    confirm_question: "¿Estás seguro?"
   users:
     new: "Novo usuario"
   brands:
     new: "Nova marca"
     models_count: "Número de modelos"
+    models_list: "Modelos de esta marca"
+  models:
+    new: "Novo modelo"

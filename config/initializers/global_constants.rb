@@ -19,3 +19,8 @@ ISSUE_PRIORITIES = {
   :normal => "normal",
   :high => "high"
 }
+AVAILABLE_LOCALES = {
+  :en => "en",
+  :es_ES => "es-ES",
+  :gl => "gl"
+}

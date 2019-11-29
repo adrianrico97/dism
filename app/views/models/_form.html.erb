@@ -1,7 +1,7 @@
 <div class="pt-4">
-  <%= form_for @brand do |f| %>
+  <%= form_for [@brand, @model] do |f| %>
     <!-- Mostrar erros -->
-    <%= render 'common/show_errors', :object => @brand %>
+    <%= render 'common/show_errors', :object => @model %>
     <!-- Formulario -->
     <div class="h-100 justify-content-center align-items-center">
       <div class="form-group">

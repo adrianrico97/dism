@@ -1,7 +1,7 @@
 class Brand < ApplicationRecord
   belongs_to :account
 
-  has_many :models
+  has_many :models, dependent: :destroy
   has_many :devices
 
   #########################################

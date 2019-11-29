@@ -9,7 +9,7 @@
       </dl>
       <!-- Listado de modelos -->
       <div>
-        
+        <%= render "models/models" %>
       </div>
       <!-- Finde de listado de modelos -->
       <!-- Fin datos -->
@@ -19,7 +19,7 @@
       <div class="mx-auto">
         <%= button_to t('actions.edit'), edit_brand_path, method: :get, class: 'btn btn-primary' %>
         <br />
-        <%= button_to t('actions.delete'), brand_path, method: :delete, class: 'btn btn-primary' %>
+        <%= button_to t('actions.delete'), brand_path, method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>
       </div>
       <!-- Fin menú lateral -->
     </div>

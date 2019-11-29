@@ -16,3 +16,9 @@ es-ES:
       low: "Baja"
       normal: "Normal"
       high: "Alta"
+    available_locales:
+      en: "Inglés"
+      es-ES: "Español"
+      gl: "Gallego"
+  errors:
+    has_dependencies: "tiene dependencias"

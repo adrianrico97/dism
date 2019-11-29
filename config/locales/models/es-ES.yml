@@ -55,6 +55,7 @@ es-ES:
         id_document_number: "NIF"
         rol: "Rol"
         active: "Activo"
+        locale: "Idioma"
       program:
         description: "Descripción"
         version: "Versión"

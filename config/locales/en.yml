@@ -47,3 +47,9 @@ en:
       low: "Low"
       normal: "Normal"
       high: "High"
+    available_locales:
+      en: "English"
+      es-ES: "Espanish"
+      gl: "Galician"
+  errors:
+    has_dependencies: "has dependencies"

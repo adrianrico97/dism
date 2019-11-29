@@ -15,6 +15,7 @@ class User < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates_uniqueness_of :email, :login, case_sensitive: true
   validates :rol, inclusion: ROLES.values
+  validates :locale, inclusion: I18n.available_locales.map(&:to_s)
 
   #########################################
   # CALLBACKS                             #

@@ -1,0 +1,20 @@
+<div class="container">
+  <h2><%= t('brands.models_list') %></h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th colspan="2"><%= Model.human_attribute_name('description') %></th>
+        <th><%= button_to t('actions.new'), new_brand_model_path(@brand), method: :get, class: 'btn btn-primary float-right' %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%@brand.models.each do |mdl| %>
+        <tr>
+          <td class="col-lg"><%= mdl.description %></td>
+          <td class="col-sm"><%= link_to t('actions.edit'), edit_brand_model_path(mdl.brand, mdl)  %></td>
+          <td class="col-sm"><%= link_to t('actions.delete'), [mdl.brand, mdl], method: :delete, data: {confirm: t('actions.confirm_question')} %></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>
