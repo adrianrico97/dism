@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <!-- Listado programas -->
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col"><%= Program.human_attribute_name('description') %></th>
+            <th scope="col"><%= Program.human_attribute_name('version') %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @programs.each do |program| %>
+            <tr>
+              <td><%= link_to program.description, program %> </td>
+              <td><%= link_to program.version, program %> </td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+       <!-- Fin listado programas -->
+    </div>
+    <div class="col-3">
+      <!-- Menú lateral -->
+      <div class="mx-auto" style="width: 82px;">
+        <%= button_to t('actions.new'), new_program_path, method: :get, class: 'btn btn-primary' %>
+      </div>
+      <!-- Fin menú lateral -->
+    </div>
+  </div>
+</div>

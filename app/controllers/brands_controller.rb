@@ -28,10 +28,12 @@ class BrandsController < ApplicationController
 
   def update
     @brand = acc.brands.find(params[:id])
-    if @brand.update(brand_params)
-      redirect_to @brand
-    else
-      redirect_to 'edit'
+    respond_to do |format|
+      if @brand.update(brand_params)
+        format.html { redirect_to @brand }
+      else
+        format.html { render :edit }
+      end
     end
   end
 

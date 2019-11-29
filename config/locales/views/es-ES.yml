@@ -47,3 +47,5 @@ es-ES:
     models_list: "Modelos de esta marca"
   models:
     new: "Nuevo modelo"
+  programs:
+    new: "Nuevo programa"

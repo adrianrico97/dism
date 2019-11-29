@@ -47,3 +47,5 @@ en:
     models_list: "Brand's models"
   models:
     new: "New model"
+  programs:
+    new: "New program"

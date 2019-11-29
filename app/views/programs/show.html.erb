@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <!-- Datos -->
+      <h1><%= @program.display_name %></h1>
+      <dl>
+        <dt><%= Program.human_attribute_name('description') %></dt>
+        <dd><%= @program.description %></dd>
+      </dl>
+      <dl>
+        <dt><%= Program.human_attribute_name('version') %></dt>
+        <dd><%= @program.version %></dd>
+      </dl>
+      <dl>
+        <dt><%= Program.human_attribute_name('observations') %></dt>
+        <dd><%= @program.observations %></dd>
+      </dl>
+      <!-- Fin datos -->
+    </div>
+    <div class="col-3">
+      <!-- Menú lateral -->
+      <div class="mx-auto">
+        <%= button_to t('actions.edit'), edit_program_path, method: :get, class: 'btn btn-primary' %>
+        <br />
+        <%= button_to t('actions.delete'), program_path, method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>
+      </div>
+      <!-- Fin menú lateral -->
+    </div>
+  </div>
+</div>

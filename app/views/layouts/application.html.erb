@@ -15,18 +15,10 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <%= link_to t('menu.home'), home_index_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to t('menu.users'), users_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to t('menu.brands'), brands_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><%= t('menu.programs') %></a>
-            </li>
+            <%= nav_link(t('menu.home'), home_index_path) %>
+            <%= nav_link(t('menu.users'), users_path) %>
+            <%= nav_link(t('menu.brands'), brands_path) %>
+            <%= nav_link(t('menu.programs'), programs_path) %>
             <li class="nav-item">
               <a class="nav-link" href="#"><%= t('menu.devices') %></a>
             </li>

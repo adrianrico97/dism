@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   resources :brands do
     resources :models
   end
+  resources :programs
 
 end

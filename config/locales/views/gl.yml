@@ -47,3 +47,5 @@ gl:
     models_list: "Modelos de esta marca"
   models:
     new: "Novo modelo"
+  programs:
+    new: "Novo programa"
