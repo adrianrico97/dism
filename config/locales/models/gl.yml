@@ -72,6 +72,8 @@ gl:
         category: "Categoría"
         price: "Prezo"
         purchase_date: "Data de compra"
+        brand: "Marca"
+        model: "Modelo"
       issue:
         title: Asunto
         description: "Description"

@@ -49,3 +49,5 @@ gl:
     new: "Novo modelo"
   programs:
     new: "Novo programa"
+  devices:
+    new: "Novo dispositivo"

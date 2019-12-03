@@ -21,5 +21,10 @@ Rails.application.routes.draw do
     resources :models
   end
   resources :programs
+  resources :devices do
+    collection do
+      get :models_for_select_brand
+    end
+  end
 
 end

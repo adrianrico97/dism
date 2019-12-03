@@ -21,7 +21,7 @@ class Account < ApplicationRecord
   def check_for_dependencies
     if (devices.count > 0 || users.count > 0 || models.count > 0 || brands.count > 0 ||
       programs.count > 0 || issues.count > 0)
-      errors.add(I18n.t('errors.has_dependencies'))
+      errors.add(:base, :invalid, message: I18n.t('errors.has_dependencies'))
       return false
     end
   end

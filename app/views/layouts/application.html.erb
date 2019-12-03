@@ -19,9 +19,7 @@
             <%= nav_link(t('menu.users'), users_path) %>
             <%= nav_link(t('menu.brands'), brands_path) %>
             <%= nav_link(t('menu.programs'), programs_path) %>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><%= t('menu.devices') %></a>
-            </li>
+            <%= nav_link(t('menu.devices'), devices_path) %>
           </ul>
           <div class="row justify-content-center pr-3">
             <spam class="text-success"> <%= material_icon.person %> </spam>

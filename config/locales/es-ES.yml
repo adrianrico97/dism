@@ -22,3 +22,4 @@ es-ES:
       gl: "Gallego"
   errors:
     has_dependencies: "tiene dependencias"
+    device_assigned_to_user: "El dispositivo ya está asignado a un usuario"

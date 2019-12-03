@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <!-- Datos -->
+      <h1><%= @device.display_name %></h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <!-- Columna de datos 1 -->
+            <dl>
+              <dt><%= Device.human_attribute_name('code') %></dt>
+              <dd><%= @device.code %></dd>
+            </dl>
+            <dl>
+              <dt><%= Device.human_attribute_name('description') %></dt>
+              <dd><%= @device.description %></dd>
+            </dl>
+            <dl>
+              <dt><%= Device.human_attribute_name('serial_number') %></dt>
+              <dd><%= @device.serial_number %></dd>
+            </dl>
+            <dl>
+              <dt><%= Device.human_attribute_name('category') %></dt>
+              <dd><%= @device.category_name_translated %></dd>
+            </dl>
+          </div>
+          <div class="col-6">
+            <!-- Columna de datos 2 -->
+            <dl>
+              <dt><%= Device.human_attribute_name('brand') %></dt>
+              <dd><%= @device.brand.try(:display_name) %></dd>
+            </dl>
+            <dl>
+              <dt><%= Device.human_attribute_name('model') %></dt>
+              <dd><%= @device.model.try(:display_name) %></dd>
+            </dl>
+            <dl>
+              <dt><%= Device.human_attribute_name('price') %></dt>
+              <dd><%= @device.price %></dd>
+            </dl>
+            <dl>
+              <dt><%= Device.human_attribute_name('purchase_date') %></dt>
+              <dd><%= @device.purchase_date.strftime('%d/%m/%Y') %></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <dl>
+        <dt><%= Device.human_attribute_name('observations') %></dt>
+        <dd><%= @device.observations %></dd>
+      </dl>
+      <!-- Fin datos -->
+    </div>
+    <div class="col-3">
+      <!-- Menú lateral -->
+      <div class="mx-auto">
+        <%= button_to t('actions.edit'), edit_device_path, method: :get, class: 'btn btn-primary' %>
+        <br />
+        <%= button_to t('actions.delete'), device_path, method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>
+      </div>
+      <!-- Fin menú lateral -->
+    </div>
+  </div>
+</div>

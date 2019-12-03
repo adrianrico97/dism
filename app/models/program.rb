@@ -26,7 +26,7 @@ class Program < ApplicationRecord
   private
   def check_for_devices
     if devices.count > 0
-      errors.add_to_base(I18n.t('errors.has_dependencies'))
+      errors.add(:base, :invalid, message: I18n.t('errors.has_dependencies'))
       return false
     end
   end

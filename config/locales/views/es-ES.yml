@@ -49,3 +49,5 @@ es-ES:
     new: "Nuevo modelo"
   programs:
     new: "Nuevo programa"
+  devices:
+    new: "Nuevo dispositivo"

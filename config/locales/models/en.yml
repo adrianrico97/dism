@@ -72,6 +72,8 @@ en:
         category: "Category"
         price: "Price"
         purchase_date: "Purchase date"
+        brand: "Brand"
+        model: "Model"
       issue:
         title: "Title"
         description: "Description"

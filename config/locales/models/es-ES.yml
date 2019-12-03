@@ -72,6 +72,8 @@ es-ES:
         category: "Categoría"
         price: "Precio"
         purchase_date: "Fecha de compra"
+        brand: "Marca"
+        model: "Modelo"
       issue:
         title: Asunto
         description: "Description"

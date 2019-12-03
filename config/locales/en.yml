@@ -53,3 +53,4 @@ en:
       gl: "Galician"
   errors:
     has_dependencies: "has dependencies"
+    device_assigned_to_user: "Device is already asigned to a user"

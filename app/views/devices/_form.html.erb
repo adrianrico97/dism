@@ -1,0 +1,58 @@
+<div class="pt-4">
+  <%= form_for @device do |f| %>
+    <!-- Mostrar erros -->
+    <%= render 'common/show_errors', :object => @device %>
+    <!-- Formulario -->
+    <div class="h-100 justify-content-center align-items-center">
+      <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-md">
+          <div class="form-group">
+            <%= f.label :code %><br>
+            <%= f.text_field :code, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :description %><br>
+            <%= f.text_field :description, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :brand_id %><br>
+            <%= f.select("brand_id", acc.brands.map {|b| [ b.description, b.id ] }, {:include_blank => true}, {:class => 'form-control'} ) %>
+          </div>
+          <div class="form-group">
+            <%= f.label :model_id %><br>
+            <%= f.select("model_id", (@device && @device.brand ? @device.brand.models.map {|m| [ m.description, m.id ] } : []), {:include_blank => true}, { :class => 'form-control'} ) %>
+          </div>
+        </div>
+        <!-- Columna 2 -->
+        <div class="col-md">
+          <div class="form-group">
+            <%= f.label :serial_number %><br>
+            <%= f.text_field :serial_number, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :price %><br>
+            <%= f.number_field :price, step: :any, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :purchase_date %><br>
+            <%= f.date_field :purchase_date, as: :date, value: f.object.try(:strftime,"%d/%m/%Y"), class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :category %><br>
+            <%= f.select("category", CATEGORIES.collect {|c,v| [ t("global_constants.categories.#{v}"), c ] }, {}, { :class => 'form-control' } ) %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :observations %><br>
+        <%= f.text_area :observations, step: :any, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <div class="mx-auto" style="width: 75px;">
+          <%= submit_tag t('actions.save'), class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

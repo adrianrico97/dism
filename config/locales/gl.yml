@@ -22,3 +22,4 @@ gl:
       gl: "Galego"
   errors:
     has_dependencies: "ten dependencias"
+    device_assigned_to_user: "O dispositivo xa está asignado a un usuario"
