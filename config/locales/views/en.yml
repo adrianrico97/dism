@@ -65,3 +65,7 @@ en:
     deassign_to_user_success: "Device deassigned to the user success"
     deassign_to_user_error: "Error deassigning the device"
     devices_users_relations: "History of assigned users"
+  issues:
+    issues_list: "Issues list"
+    new: "New issue"
+    create_issue: "Create new issue"

@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <!-- Datos -->
+      <dl>
+        <dt><%= Issue.human_attribute_name('title') %></dt>
+        <h1><%= @issue.title %></h1>
+      </dl>
+      <dl>
+        <dt><%= Issue.human_attribute_name('date') %></dt>
+        <dd><%= @issue.date.strftime('%d/%m/%Y %H:%M') %></dd>
+      </dl>
+      <div>
+        <div class="row">
+          <div class="col-6">
+            <!-- Columna de datos 1 -->
+            <dl>
+              <dt><%= Issue.human_attribute_name('user') %></dt>
+              <dd><%= @issue.user.display_name %></dd>
+            </dl>
+            <dl>
+              <dt><%= Issue.human_attribute_name('device') %></dt>
+              <dd><%= @issue.device.display_name %></dd>
+            </dl>
+          </div>
+          <div class="col-6">
+            <!-- Columna de datos 2 -->
+            <dl>
+              <dt><%= Issue.human_attribute_name('priority') %></dt>
+              <dd><%= t("global_constants.issue_priorities.#{@issue.priority}") %></dd>
+            </dl>
+            <dl>
+              <dt><%= Issue.human_attribute_name('state') %></dt>
+              <dd><%= t("global_constants.issue_states.#{@issue.state}") %></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <dl>
+        <dt><%= Issue.human_attribute_name('description') %></dt>
+        <dd><%= @issue.description %></dd>
+      </dl>
+      <!-- Fin datos -->
+    </div>
+    <div class="col-3">
+      <!-- Menú lateral -->
+      <div class="mx-auto">
+        <% unless @issue.closed? %>
+        <%= button_to t('actions.edit'), edit_device_issue_path(@issue.device, @issue), method: :get, class: 'btn btn-primary' %>
+        <br>
+          <%= button_to t('actions.delete'), [@issue.device, @issue], method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>
+        <%end%>
+      </div>
+      <!-- Fin menú lateral -->
+    </div>
+  </div>
+</div>

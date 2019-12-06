@@ -65,3 +65,7 @@ gl:
     deassign_to_user_success: "Dispositivo desasignado correctamentes"
     deassign_to_user_error: "Error desasignando el dispositivo"
     devices_users_relations: "Histórico de usuarios asignados"
+  issues:
+    issues_list: "Listado de incidencias"
+    new: "Nova incidencia"
+    create_issue: "Rexistrar nova incidencia"
