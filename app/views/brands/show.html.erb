@@ -17,6 +17,8 @@
     <div class="col-3">
       <!-- Menú lateral -->
       <div class="mx-auto">
+        <%= go_back_link(brands_path) %>
+        <hr>
         <%= button_to t('actions.edit'), edit_brand_path, method: :get, class: 'btn btn-primary' %>
         <br />
         <%= button_to t('actions.delete'), brand_path, method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>

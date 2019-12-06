@@ -41,13 +41,18 @@
         <dd><%= @issue.description %></dd>
       </dl>
       <!-- Fin datos -->
+      <!-- Listado seguimentos -->
+      <%= render 'trackings/trackings' %>
+      <!-- Fin listado de seguimentos -->
     </div>
     <div class="col-3">
       <!-- Menú lateral -->
       <div class="mx-auto">
+        <%= go_back_link(device_path(@issue.device)) %>
         <% unless @issue.closed? %>
-        <%= button_to t('actions.edit'), edit_device_issue_path(@issue.device, @issue), method: :get, class: 'btn btn-primary' %>
-        <br>
+          <hr>
+          <%= button_to t('actions.edit'), edit_device_issue_path(@issue.device, @issue), method: :get, class: 'btn btn-primary' %>
+          <br>
           <%= button_to t('actions.delete'), [@issue.device, @issue], method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>
         <%end%>
       </div>

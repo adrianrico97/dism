@@ -38,6 +38,7 @@ es-ES:
     save: "Guardar"
     update: "Actualizar"
     create: "Crear"
+    go_back: "Volver atrás"
     confirm_question: "¿Estás seguro?"
   users:
     new: "Nuevo usuario"
@@ -69,3 +70,6 @@ es-ES:
     issues_list: "Listado de incidencias"
     new: "Nueva incidencia"
     create_issue: "Registrar nueva incidencia"
+  trackings:
+    new: "Nuevo seguimiento"
+    trackings_list: "Seguimientos"

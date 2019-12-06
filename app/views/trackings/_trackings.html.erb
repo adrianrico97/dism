@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="d-flex w-100 justify-content-between">
+    <h2 class="mb-1" ><%= t('trackings.trackings_list') %></h2>
+    <%= button_to t('actions.new'), new_device_issue_tracking_path(@issue.device, @issue), method: :get, class: 'btn btn-primary float-right' %>
+  </div>
+  <hr>
+  <div class="list-group">
+  <% @issue.trackings.each do |tracking| %>
+    <div class="list-group-item list-group-item-action">
+      <p class="mb-1"><%= tracking.description %></p>
+      <div class="d-flex w-100 justify-content-between pt-2">
+        <p class="mb-1"><%= tracking.user.display_name %></p>
+        <small><%= tracking.date.strftime('%d/%m/%Y %H:%M') %></small>
+      </div>
+    </div>
+    <br>
+  <% end %>
+  </div>
+</div>

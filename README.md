@@ -1,24 +1,49 @@
-# README
+# DISM (Device Inventory Simple Manager)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DISM é unha plataforma que nos permite xestionar dunha forma sinxela ao inventario de dispositivos electrónicos da nosa empresa e as súas incidencias
 
-Things you may want to cover:
+## DESPREGAR A APLICACIÓN
 
-* Ruby version
+### 1. Instalar RVM para o control das versións de Ruby
 
-* System dependencies
+  sudo apt-add-repository -y ppa:rael-gc/rvm
+  sudo apt-get update
+  sudo apt-get install rvm
 
-* Configuration
+Máis información sobre a instalación de RVM: https://github.com/rvm/ubuntu_rvm
 
-* Database creation
+### 2. Instalar Ruby versión 2.6.5
 
-* Database initialization
+  rvm install "ruby-2.6.5"
 
-* How to run the test suite
+### 3. Instalar as RubyGems
+Debemos estar ubicados dentro do directorio do proxecto.
 
-* Services (job queues, cache servers, search engines, etc.)
+  bundle install
 
-* Deployment instructions
+### 4. Instalar yarn
+Seguir os pasos en: https://yarnpkg.com/lang/en/docs/install/#debian-stable
 
-* ...
+  yarn install
+
+### 5. Instalar MySQL Server
+
+  sudo apt install mysql-server
+
+### 6. Crear e migrar a base de datos
+Revisar credenciales de acceso a MySQL en config/database.yml
+
+  rake db:create && rake db:migrate
+
+### 7. Iniciar o servidor
+
+  rails server
+
+Podemos iniciarlo en modo producción:
+
+  RAILS_ENV=production rails s
+
+Podemos iniciar unha consola co seguinte comando:
+
+  rails console
+

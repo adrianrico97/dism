@@ -3,12 +3,12 @@
     <div class="col-9">
       <!-- Formulario -->
       <h1 class="text-left"><%= @device.display_name %></h1>
-      <h3 class="text-left"><%= @issue.title %></h3>
-      <% if @issue.open?%>
-        <%= render 'form' %>
-      <%else%>
-        <%= render 'header_form' %>
-      <%end%>
+      <div class="container">
+        <h4 class="text-left"><%= @issue.title %></h4>
+        <p class="text-left"><%= @issue.description %></p>
+      </div>
+      <h3 class="text-left"><%= t('trackings.new') %></h3>
+      <%= render 'form' %>
       <!-- Fin formulario -->
     </div>
     <div class="col-3">

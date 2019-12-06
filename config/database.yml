@@ -25,30 +25,22 @@
 #  database: db/production.sqlite3
 
 # Configurar conexión da base de datos en MySQL
-#default: &default
-#  adapter: mysql2
-#  encoding: utf8
-#  username: root
-#  password:
-#  host: 127.0.0.1
-#  port: 3306
-#
-#development:
-#  <<: *default
-#  database: development_db_name
-#
-#test:
-#  <<: *default
-#  database: test_db_name
-#
-#production:
-#  <<: *default
-#  database: production_db_name
-development:
+default: &default
   adapter: mysql2
   encoding: utf8
-  database: dism_development
   username: root
   password: Abc123.
   host: 127.0.0.1
   port: 3306
+
+development:
+  <<: *default
+  database: dism_development
+
+production:
+  <<: *default
+  database: dism_pro
+
+#test:
+#  <<: *default
+#  database: dism_test

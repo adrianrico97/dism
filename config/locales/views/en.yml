@@ -38,6 +38,7 @@ en:
     save: "Save"
     update: "Update"
     create: "Create"
+    go_back: "Go back"
     confirm_question: "Are you sure?"
   users:
     new: "New user"
@@ -69,3 +70,6 @@ en:
     issues_list: "Issues list"
     new: "New issue"
     create_issue: "Create new issue"
+  trackings:
+    new: "New tracking"
+    trackings_list: "Trackings"

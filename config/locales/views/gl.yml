@@ -38,6 +38,7 @@ gl:
     save: "Gardar"
     update: "Actualizar"
     create: "Crear"
+    go_back: "Volver atrás"
     confirm_question: "¿Estás seguro?"
   users:
     new: "Novo usuario"
@@ -69,3 +70,6 @@ gl:
     issues_list: "Listado de incidencias"
     new: "Nova incidencia"
     create_issue: "Rexistrar nova incidencia"
+  trackings:
+    new: "Nuevo seguimiento"
+    trackings_list: "Seguimentos"

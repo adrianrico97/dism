@@ -57,9 +57,9 @@
       </dl>
       <!-- Fin datos -->
       <!-- Listado de issues -->
-      <div>
+      <% if @device.issues.any? %>
         <%= render "issues/issues" %>
-      </div>
+      <%end%>
       <!-- Fin de listado de issues -->
       <!-- Listado histórico de usuarios -->
       <% if @device.devices_users_relations.any? %>
@@ -70,6 +70,8 @@
     <div class="col-3">
       <!-- Menú lateral -->
       <div class="mx-auto">
+        <%= go_back_link(devices_path) %>
+        <hr>
         <%= button_to t('actions.edit'), edit_device_path, method: :get, class: 'btn btn-primary' %>
         <br />
         <%= button_to t('actions.delete'), device_path, method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>

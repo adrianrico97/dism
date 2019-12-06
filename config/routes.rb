@@ -35,7 +35,9 @@ Rails.application.routes.draw do
       get :deassign
       post :save_deassign
     end
-    resources :issues
+    resources :issues do
+      resources :trackings, only: [:new, :create]
+    end
   end
 
 end
