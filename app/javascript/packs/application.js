@@ -45,3 +45,10 @@ $(document).ready(function() {
     }
   });
 })
+
+// Eliminar as mensaxes flash ao cabo de 5 segundos
+$(document).ready(function() {
+  setTimeout(function() {
+    $("#flash-messages-container").fadeOut(1500);
+  },5000);
+});

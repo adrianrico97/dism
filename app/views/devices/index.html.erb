@@ -8,6 +8,7 @@
             <th scope="col"><%= Device.human_attribute_name('code') %></th>
             <th scope="col"><%= Device.human_attribute_name('description') %></th>
             <th scope="col"><%= Device.human_attribute_name('category') %></th>
+            <th scope="col"><%= t('devices.assigned') %></th>
           </tr>
         </thead>
         <tbody>
@@ -16,6 +17,7 @@
               <td><%= link_to device.code, device %></td>
               <td><%= link_to device.description, device %></td>
               <td><%= link_to device.category_name_translated, device %></td>
+              <td><%=(device.assigned? ? material_icon.done : material_icon.clear )%></td>
             </tr>
           <%end%>
         </tbody>

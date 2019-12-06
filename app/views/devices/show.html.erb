@@ -23,6 +23,12 @@
               <dt><%= Device.human_attribute_name('category') %></dt>
               <dd><%= @device.category_name_translated %></dd>
             </dl>
+            <% if @device.assigned? %>
+              <dl>
+                <dt><%= t('devices.current_user') %></dt>
+                <dd><%= @device.current_user.display_name %></dd>
+              </dl>
+            <%end%>
           </div>
           <div class="col-6">
             <!-- Columna de datos 2 -->
@@ -40,7 +46,7 @@
             </dl>
             <dl>
               <dt><%= Device.human_attribute_name('purchase_date') %></dt>
-              <dd><%= @device.purchase_date.strftime('%d/%m/%Y') %></dd>
+              <dd><%= @device.purchase_date.try(:strftime, '%d/%m/%Y') %></dd>
             </dl>
           </div>
         </div>
@@ -50,6 +56,10 @@
         <dd><%= @device.observations %></dd>
       </dl>
       <!-- Fin datos -->
+      <!-- Listado histórico de usuarios -->
+      <% if @device.devices_users_relations.any? %>
+        <%= render 'devices_users_relations' %>
+      <%end%>
     </div>
     <div class="col-3">
       <!-- Menú lateral -->
@@ -57,6 +67,12 @@
         <%= button_to t('actions.edit'), edit_device_path, method: :get, class: 'btn btn-primary' %>
         <br />
         <%= button_to t('actions.delete'), device_path, method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>
+        <hr>
+        <% if @device.assigned? %>
+          <%= button_to t('devices.deassign_to_user'), deassign_device_path, method: :get, class: 'btn btn-primary' %>
+        <%else%>
+          <%= button_to t('devices.assign_to_user'), assign_device_path, method: :get, class: 'btn btn-primary' %>
+        <%end%>
       </div>
       <!-- Fin menú lateral -->
     </div>

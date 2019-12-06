@@ -41,6 +41,8 @@ en:
     confirm_question: "Are you sure?"
   users:
     new: "New user"
+    activate: "User activated"
+    deactivate: "User deactivated"
   brands:
     new: "New brand"
     models_count: "Number of models"
@@ -51,3 +53,15 @@ en:
     new: "New program"
   devices:
     new: "New device"
+    assigned: "Assigned"
+    assign_to_user: "Assing to user"
+    assign_date: "Assign's date"
+    assign_user: "User"
+    assign_to_user_success: "Device assigned to the user success"
+    assign_to_user_error: "You can't assign this device to this user"
+    current_user: "Current user"
+    deassign_to_user: "Deassing device"
+    deassign_date: "Deassign's date"
+    deassign_to_user_success: "Device deassigned to the user success"
+    deassign_to_user_error: "Error deassigning the device"
+    devices_users_relations: "History of assigned users"

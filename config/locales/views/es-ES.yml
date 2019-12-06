@@ -41,6 +41,8 @@ es-ES:
     confirm_question: "¿Estás seguro?"
   users:
     new: "Nuevo usuario"
+    activate: "Usuario activado"
+    deactivate: "Usuario desactivado"
   brands:
     new: "Nueva marca"
     models_count: "Número de modelos"
@@ -51,3 +53,15 @@ es-ES:
     new: "Nuevo programa"
   devices:
     new: "Nuevo dispositivo"
+    assigned: "Asignado"
+    assign_to_user: "Asignar a usuario"
+    assign_date: "Fecha de asignación"
+    assign_user: "Usuario"
+    assign_to_user_success: "Dispositivo asignado a usuario correctamente"
+    assign_to_user_error: "No puedes asignar este dispositivo a este usuario"
+    current_user: "Usuario actual"
+    deassign_to_user: "Desasignar dispositivo"
+    deassign_date: "Fecha de desasignación"
+    deassign_to_user_success: "Dispositivo desasignado correctamentes"
+    deassign_to_user_error: "Error desasignando el dispositivo"
+    devices_users_relations: "Histórico de usuarios asignados"

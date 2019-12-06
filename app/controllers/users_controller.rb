@@ -38,12 +38,14 @@ class UsersController < ApplicationController
   def activate
     @user = acc.users.find(params[:id])
     @user.update_attributes! :active => true
+    flash[:success] = I18n.t('users.activate')
     redirect_to @user
   end
 
   def deactivate
     @user = acc.users.find(params[:id])
     @user.update_attributes! :active => false
+    flash[:success] = I18n.t('users.deactivate')
     redirect_to @user
   end
 

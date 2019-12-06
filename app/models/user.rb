@@ -1,10 +1,15 @@
 class User < ApplicationRecord
   belongs_to :account
 
-  has_many :devices_users_relations
+  has_many :devices_users_relations, dependent: :destroy
   has_many :devices, through: :devices_users_relations
   has_many :issues
   has_many :trackings
+
+  #########################################
+  # SCOPES                                #
+  #########################################
+  scope :actives, -> { where("active IS TRUE") }
 
   #########################################
   # VALIDACIÓNS                           #
@@ -22,7 +27,7 @@ class User < ApplicationRecord
   #########################################
   before_create do |user|
     user.active ||= true
-    user.locale ||= I18n.default_locale
+    user.locale ||= AVAILABLE_LOCALES[:es_ES]
   end
 
   #########################################
@@ -32,6 +37,9 @@ class User < ApplicationRecord
     devices_users_relations.select{|x| x.active? }.map(&:device)
   end
 
+  def display_name
+    "#{login} - #{full_name}"
+  end
 
   def full_name
     [name, surname_1, surname_2].join(" ")

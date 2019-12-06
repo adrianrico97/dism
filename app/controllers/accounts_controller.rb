@@ -20,6 +20,7 @@ class AccountsController < ApplicationController
         user.surname_1 = params[:surname_1]
         user.surname_2 = params[:surname_2]
         user.id_document_number = params[:id_document_number]
+        user.locale = AVAILABLE_LOCALES[:es_ES]
         if user.valid?
           user.save!
           redirect_to root_path

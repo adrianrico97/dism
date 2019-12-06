@@ -5,25 +5,35 @@ Rails.application.routes.draw do
   resources :home
 
   resources :users
+
   resources :sessions, only: [:new, :create, :destroy]
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   
   resources :accounts, only: [:new, :create]
-  resources :users
+
   resources :users do
     member do
       post :activate
       post :deactivate
     end
   end
+
   resources :brands do
     resources :models
   end
+
   resources :programs
+
   resources :devices do
     collection do
       get :models_for_select_brand
+    end
+    member do
+      get :assign
+      post :save_assign
+      get :deassign
+      post :save_deassign
     end
   end
 

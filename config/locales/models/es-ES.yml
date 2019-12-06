@@ -74,6 +74,11 @@ es-ES:
         purchase_date: "Fecha de compra"
         brand: "Marca"
         model: "Modelo"
+      devices_users_relation:
+        device: "Dispositivo"
+        user: "Usuario"
+        assignment_date: "Fecha de asignación"
+        deassignment_date: "Fecha de desasignación"
       issue:
         title: Asunto
         description: "Description"

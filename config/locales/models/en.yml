@@ -74,6 +74,11 @@ en:
         purchase_date: "Purchase date"
         brand: "Brand"
         model: "Model"
+      devices_users_relation:
+        device: "Device"
+        user: "User"
+        assignment_date: "Assignment date"
+        deassignment_date: "Deassignment date"
       issue:
         title: "Title"
         description: "Description"

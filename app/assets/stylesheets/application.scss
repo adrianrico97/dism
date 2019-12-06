@@ -20,3 +20,12 @@
 @import "bootstrap";
 @import "material_icons";
 
+
+/* 
+ * CSS para as mensaxes flash. Fai que se amosen na esquina superior dereita
+ */
+#flash-messages-container {
+  position: fixed;
+  right: 0;
+  z-index: 1030;
+}

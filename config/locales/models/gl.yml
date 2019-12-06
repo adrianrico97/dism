@@ -74,6 +74,11 @@ gl:
         purchase_date: "Data de compra"
         brand: "Marca"
         model: "Modelo"
+      devices_users_relation:
+        device: "Dispositivo"
+        user: "Usuario"
+        assignment_date: "Data de asignación"
+        deassignment_date: "Data de desasignación"
       issue:
         title: Asunto
         description: "Description"
