@@ -35,6 +35,7 @@ Rails.application.routes.draw do
       get :deassign
       post :save_deassign
     end
+    resources :issues
   end
 
 end

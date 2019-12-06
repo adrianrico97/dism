@@ -85,6 +85,8 @@ gl:
         date: "Data"
         state: "Estado"
         priority: "Prioridade"
+        device: "Dispositivo"
+        user: "Usuario"
       tracking:
         description: "Descripción"
         date: "Data"

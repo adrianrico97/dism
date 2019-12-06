@@ -85,6 +85,8 @@ es-ES:
         date: "Fecha"
         state: "Estado"
         priority: "Prioridad"
+        device: "Dispositivo"
+        user: "Usuario"
       tracking:
         description: "Descripción"
         date: "Fecha"

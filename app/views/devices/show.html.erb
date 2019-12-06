@@ -56,10 +56,16 @@
         <dd><%= @device.observations %></dd>
       </dl>
       <!-- Fin datos -->
+      <!-- Listado de issues -->
+      <div>
+        <%= render "issues/issues" %>
+      </div>
+      <!-- Fin de listado de issues -->
       <!-- Listado histórico de usuarios -->
       <% if @device.devices_users_relations.any? %>
         <%= render 'devices_users_relations' %>
       <%end%>
+      <!-- Fin listado histórico de usuarios -->
     </div>
     <div class="col-3">
       <!-- Menú lateral -->
@@ -73,6 +79,9 @@
         <%else%>
           <%= button_to t('devices.assign_to_user'), assign_device_path, method: :get, class: 'btn btn-primary' %>
         <%end%>
+        <hr>
+        <%= button_to t('issues.create_issue'),  new_device_issue_path(@device), method: :get, class: 'btn btn-primary' %>
+        <br />
       </div>
       <!-- Fin menú lateral -->
     </div>

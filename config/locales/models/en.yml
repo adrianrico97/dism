@@ -85,6 +85,8 @@ en:
         date: "Date"
         state: "State"
         priority: "Priority"
+        device: "Device"
+        user: "User"
       tracking:
         description: "Description"
         date: "Date"

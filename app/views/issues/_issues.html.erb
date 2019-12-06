@@ -1,0 +1,20 @@
+<div class="container">
+  <h2><%= t('issues.issues_list') %></h2>
+  <hr>
+  <div class="list-group">
+  <% @device.issues.each do |issue| %>
+    <%= link_to device_issue_path(@device, issue), :class=> class_for_issue_by_state(issue) do %>
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><%= issue.title %></h5>
+        <small><%= issue.date.strftime('%d/%m/%Y %H:%M') %></small>
+      </div>
+      <p class="mb-1"><%= (issue.description.size > 180 ? "#{issue.description[0..180]}..." : issue.description) %></p>
+      <div class="d-flex w-100 justify-content-between">
+        <small class="mb-1"><%= issue.user.display_name %></small>
+        <%= priority_info_html(issue.priority) %>
+      </div>
+    <% end %>
+    <br>
+  <% end %>
+  </div>
+</div>

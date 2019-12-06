@@ -65,3 +65,7 @@ es-ES:
     deassign_to_user_success: "Dispositivo desasignado correctamentes"
     deassign_to_user_error: "Error desasignando el dispositivo"
     devices_users_relations: "Histórico de usuarios asignados"
+  issues:
+    issues_list: "Listado de incidencias"
+    new: "Nueva incidencia"
+    create_issue: "Registrar nueva incidencia"
