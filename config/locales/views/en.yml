@@ -29,6 +29,8 @@ en:
     surname_1: "Surname 1"
     surname_2: "Surname 2"
     id_document_number: "ID card number"
+  account:
+    success_updated: "Successfully updated"
   actions:
     new: "New"
     edit: "Edit"
@@ -44,6 +46,7 @@ en:
     new: "New user"
     activate: "User activated"
     deactivate: "User deactivated"
+    success_updated: "Successfully updated"
   brands:
     new: "New brand"
     models_count: "Number of models"
@@ -73,3 +76,8 @@ en:
   trackings:
     new: "New tracking"
     trackings_list: "Trackings"
+  home:
+    devices_assigned_currently_to_you: "Devices assigned currently to you"
+    not_closed_issues: "Not closed issues"
+    edit_my_user: "Edit my user"
+    edit_account: "Edit account"

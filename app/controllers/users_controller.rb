@@ -29,7 +29,12 @@ class UsersController < ApplicationController
   def update
     @user = acc.users.find(params[:id])
     if @user.update(user_params)
-      redirect_to @user
+      if current_user_can?("users", "show")
+        redirect_to @user
+      else
+        flash[:success] = I18n.t('users.success_updated')
+        redirect_to home_index_path
+      end
     else
       render 'edit'
     end

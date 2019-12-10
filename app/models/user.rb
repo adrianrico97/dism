@@ -45,4 +45,16 @@ class User < ApplicationRecord
     [name, surname_1, surname_2].join(" ")
   end
 
+  def admin?
+    rol == ROLES[:admin]
+  end
+
+  def technician?
+    rol == ROLES[:technician]
+  end
+  
+  def basic?
+    rol == ROLES[:basic]
+  end
+
 end

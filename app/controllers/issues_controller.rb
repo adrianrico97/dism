@@ -14,6 +14,8 @@ class IssuesController < ApplicationController
     @device = acc.devices.find(params[:device_id])
     @issue = @device.issues.build(issue_params)
     @issue.user = current_user
+    @issue.priority ||= ISSUE_PRIORITIES[:normal]
+    @issue.state ||= ISSUE_STATES[:open]
     if @issue.save
       redirect_to device_issue_path(@device, @issue)
     else

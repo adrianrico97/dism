@@ -1,4 +1,5 @@
 class TrackingsController < ApplicationController
+  include SessionsModule
 
   def new
     @device = acc.devices.find(params[:device_id])

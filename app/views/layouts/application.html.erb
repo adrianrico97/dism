@@ -15,11 +15,11 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <%= nav_link(t('menu.home'), home_index_path) %>
-            <%= nav_link(t('menu.users'), users_path) %>
-            <%= nav_link(t('menu.brands'), brands_path) %>
-            <%= nav_link(t('menu.programs'), programs_path) %>
-            <%= nav_link(t('menu.devices'), devices_path) %>
+            <%= nav_link(t('menu.home'), home_index_path) if current_user_can?("home", "index") %>
+            <%= nav_link(t('menu.users'), users_path) if current_user_can?("users", "index") %>
+            <%= nav_link(t('menu.brands'), brands_path) if current_user_can?("brands", "index") %>
+            <%= nav_link(t('menu.programs'), programs_path) if current_user_can?("programs", "index") %>
+            <%= nav_link(t('menu.devices'), devices_path) if current_user_can?("devices", "index") %>
           </ul>
           <div class="row justify-content-center pr-3">
             <spam class="text-success"> <%= material_icon.person %> </spam>

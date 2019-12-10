@@ -2,7 +2,7 @@
   <h2><%= t('issues.issues_list') %></h2>
   <hr>
   <div class="list-group">
-  <% @device.issues.each do |issue| %>
+  <% issues.each do |issue| %>
     <%= link_to device_issue_path(@device, issue), :class=> class_for_issue_by_state(issue) do %>
       <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1"><%= issue.title %></h5>

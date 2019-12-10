@@ -46,9 +46,14 @@ $(document).ready(function() {
   });
 })
 
-// Eliminar as mensaxes flash ao cabo de 5 segundos
+// Engadir comportamente as mensaxes flash
 $(document).ready(function() {
+  // Eliminar as mensaxes flash ao cabo de 5 segundos
   setTimeout(function() {
     $("#flash-messages-container").fadeOut(1500);
   },5000);
+  // Eliminar mensaxe ao facer click en pechar
+  $("#flash-messages-container").children().on('click', function(){
+    $("#flash-messages-container").fadeOut(1500);
+  });
 });

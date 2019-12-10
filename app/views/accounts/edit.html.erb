@@ -1,0 +1,30 @@
+<div class="container h-100 mt-5">
+  <div class="row">
+    <div class="col-9">
+      <!-- Formulario -->
+      <h1 class="text-left"><%= @account.description %></h1>
+      <div class="pt-4">
+      <%= form_for @account do |f| %>
+        <!-- Mostrar erros -->
+        <%= render 'common/show_errors', :object => @account %>
+        <!-- Formulario -->
+        <div class="form-group">
+          <%= f.label :description %><br>
+          <%= f.text_field :description, class: 'form-control' %>
+        </div> 
+        <div class="form-group">
+          <div class="mx-auto" style="width: 75px;">
+            <%= submit_tag t('actions.save'), class: 'btn btn-primary' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+      <!-- Fin formulario -->
+    </div>
+    <div class="col-3">
+      <!-- Menú lateral -->
+      <%= go_back_link(home_index_path) %>
+      <!-- Fin menú lateral -->
+    </div>
+  </div>
+</div>

@@ -1,4 +1,8 @@
 class AccountsController < ApplicationController
+  include SessionsModule
+
+  # No caso de accounts necesitamos acceder sen login a new e a create (para que poidan rexistrarse novos usuarios)
+  before_action :require_login, :set_locale, :verify_access, only: [:edit, :update]
 
   def new
     render :layout => false
@@ -36,6 +40,25 @@ class AccountsController < ApplicationController
       end
       
     end
+  end
+
+  def edit
+    @account = acc
+  end
+
+  def update
+    @account = acc
+    if @account.update(account_params)
+      flash[:success] = I18n.t('account.success_updated')
+      redirect_to home_index_path
+    else
+      render 'edit'
+    end
+  end
+
+  private
+  def account_params
+    params.require(:account).permit(:description)
   end
 
 end

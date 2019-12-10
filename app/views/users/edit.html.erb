@@ -3,12 +3,20 @@
     <div class="col-9">
       <!-- Formulario -->
       <h1 class="text-left"><%= @user.full_name %></h1>
-      <%= render 'form' %>
+      <% if current_user.admin? %>
+        <%= render 'form' %>
+      <%else%>
+        <%= render 'form_my_user' %>
+      <%end%>
       <!-- Fin formulario -->
     </div>
     <div class="col-3">
       <!-- Menú lateral -->
-      <%= go_back_link(user_path(@user)) %>
+      <% if current_user.admin? %>
+        <%= go_back_link(user_path(@user)) %>
+      <%else%>
+        <%= go_back_link(home_index_path) %>
+      <%end%>
       <!-- Fin menú lateral -->
     </div>
   </div>

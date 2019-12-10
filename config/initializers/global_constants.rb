@@ -1,5 +1,6 @@
 ROLES = {
   :admin => "admin",
+  :technician => "technician",
   :basic => "basic"
 }
 

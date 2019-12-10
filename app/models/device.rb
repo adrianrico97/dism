@@ -46,6 +46,10 @@ class Device < ApplicationRecord
     self.devices_users_relations.detect{|x| x.active? }.try(:user)
   end
 
+  def current_assignment_date
+    self.devices_users_relations.detect{|x| x.active? }.try(:assignment_date)
+  end
+
   def assigned?
     current_user.present?
   end

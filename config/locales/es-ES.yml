@@ -4,6 +4,7 @@ es-ES:
   global_constants:
     roles:
       admin: "Usuario administrador"
+      technician: "Usuario técnico"
       basic: "Usuario básico"
     categories:
       computer: "Ordenador"
@@ -23,3 +24,4 @@ es-ES:
   errors:
     has_dependencies: "tiene dependencias"
     device_assigned_to_user: "El dispositivo ya está asignado a un usuario"
+    not_have_access: "No tienes acceso a esta acción"

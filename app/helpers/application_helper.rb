@@ -33,9 +33,9 @@ module ApplicationHelper
 
   # Xenera un enlace para volver atrás. Debemos pasarlle o enlace ao que debe dirixir
   def go_back_link(link)
-    #text = content_tag(:span, material_icon.arrow_back) + content_tag(:span, I18n.t('actions.go_back'))
-    text = content_tag(:span, material_icon.arrow_back, class: 'icon-in-button')
-    link_to(text, link, class: 'btn btn-secondary')
+    text = content_tag(:span, material_icon.arrow_back) + content_tag(:span, I18n.t('actions.go_back'))
+    div_container = content_tag(:div, text, class: 'pl-2 row pr-3')
+    link_to(div_container, link, class: 'btn btn-secondary')
   end
 
 end

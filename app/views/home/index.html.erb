@@ -1,1 +1,76 @@
-<h2>PÁXINA HOME</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <% if current_user.admin? || current_user.technician? || current_user.basic? %>
+        <!-- Listado dispositivo -->
+        <div class="pt-2">
+          <h2><%= t('home.devices_assigned_currently_to_you') %></h2>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col"><%= Device.human_attribute_name('code') %></th>
+                <th scope="col"><%= Device.human_attribute_name('description') %></th>
+                <th scope="col"><%= Device.human_attribute_name('category') %></th>
+                <th scope="col"><%= DevicesUsersRelation.human_attribute_name('assignment_date') %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% current_user.active_devices.compact.each do |device| %>
+                <tr>
+                  <td><%= link_to device.code, device %></td>
+                  <td><%= link_to device.description, device %></td>
+                  <td><%= link_to device.category_name_translated, device %></td>
+                  <td><%= link_to device.current_assignment_date.try(:strftime, '%d/%m/%Y'), device %></td>
+                </tr>
+              <%end%>
+            </tbody>
+          </table>
+        </div>
+        <!-- Fin listado dispositivo -->
+      <%end%>
+      <% if current_user.admin? || current_user.technician? %>
+        <!-- Listado dispositivo -->
+        <div class="pt-4">
+          <h2><%= t('home.not_closed_issues') %></h2>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col"><%= Issue.human_attribute_name('title') %></th>
+                <th scope="col"><%= Issue.human_attribute_name('date') %></th>
+                <th scope="col"><%= Issue.human_attribute_name('device') %></th>
+                <th scope="col"><%= Issue.human_attribute_name('priority') %></th>
+                <th scope="col"><%= Issue.human_attribute_name('state') %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% acc.issues.not_closed.each do |issue| %>
+                <tr>
+                  <td><%= link_to issue.title, device_issue_path(issue.device, issue) %></td>
+                  <td><%= link_to issue.date.strftime('%d/%m/%Y'), device_issue_path(issue.device, issue) %></td>
+                  <td><%= link_to issue.device.display_name, issue.device %></td>
+                  <td><%= link_to issue.priority_translated, device_issue_path(issue.device, issue) %></td>
+                  <td><%= link_to issue.state_translated, device_issue_path(issue.device, issue) %></td>
+                </tr>
+              <%end%>
+            </tbody>
+          </table>
+        </div>
+        <!-- Fin listado dispositivo -->
+      <%end%>
+    </div>
+    <div class="col-3 pl-5 pt-3">
+      <!-- Menú lateral -->
+        <div class="row pl-5">
+          <spam><%= material_icon.account_box %></spam>
+          <span class="pl-1"><%= link_to t('home.edit_my_user'), edit_user_path(current_user) %></span>
+        </div>
+        <% if current_user.admin? %>
+          <div class="row pl-5">
+            <spam><%= material_icon.account_balance %></spam>
+            <span class="pl-1"><%= link_to t('home.edit_account'), edit_account_path(acc) %></span>
+          </div>
+        <%end%>
+      <!-- Fin menú lateral -->
+    </div>
+  </div>
+</div>

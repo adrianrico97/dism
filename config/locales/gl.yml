@@ -4,6 +4,7 @@ gl:
   global_constants:
     roles:
       admin: "Usuario administrador"
+      technician: "Usuario técnico"
       basic: "Usuario básico"
     categories:
       computer: "Ordenador"
@@ -23,3 +24,4 @@ gl:
   errors:
     has_dependencies: "ten dependencias"
     device_assigned_to_user: "O dispositivo xa está asignado a un usuario"
+    not_have_access: "Non tes acceso a esta acción"

@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <%@device.devices_users_relations.sort_by{|dur| dur.assignment_date}.each do |relation| %>
+      <% @device.devices_users_relations.sort_by{|dur| dur.assignment_date}.each do |relation| %>
         <tr>
           <td><%= relation.user.display_name %></td>
           <td><%= relation.assignment_date.strftime('%d/%m/%Y') %></td>

@@ -40,29 +40,33 @@
               <dt><%= Device.human_attribute_name('model') %></dt>
               <dd><%= @device.model.try(:display_name) %></dd>
             </dl>
-            <dl>
-              <dt><%= Device.human_attribute_name('price') %></dt>
-              <dd><%= @device.price %></dd>
-            </dl>
-            <dl>
-              <dt><%= Device.human_attribute_name('purchase_date') %></dt>
-              <dd><%= @device.purchase_date.try(:strftime, '%d/%m/%Y') %></dd>
-            </dl>
+            <% if current_user.admin? || current_user.technician? %>
+              <dl>
+                <dt><%= Device.human_attribute_name('price') %></dt>
+                <dd><%= @device.price %></dd>
+              </dl>
+              <dl>
+                <dt><%= Device.human_attribute_name('purchase_date') %></dt>
+                <dd><%= @device.purchase_date.try(:strftime, '%d/%m/%Y') %></dd>
+              </dl>
+            <%end%>
           </div>
         </div>
       </div>
-      <dl>
-        <dt><%= Device.human_attribute_name('observations') %></dt>
-        <dd><%= @device.observations %></dd>
-      </dl>
+      <% if current_user.admin? || current_user.technician? %>
+        <dl>
+          <dt><%= Device.human_attribute_name('observations') %></dt>
+          <dd><%= @device.observations %></dd>
+        </dl>
+      <%end%>
       <!-- Fin datos -->
       <!-- Listado de issues -->
       <% if @device.issues.any? %>
-        <%= render "issues/issues" %>
+        <%= render "issues/issues", :issues => ((current_user.admin? || current_user.technician?) ? @device.issues : @device.issues.for_user(current_user)) %>
       <%end%>
       <!-- Fin de listado de issues -->
       <!-- Listado histórico de usuarios -->
-      <% if @device.devices_users_relations.any? %>
+      <% if (current_user.admin? || current_user.technician?) && @device.devices_users_relations.any? %>
         <%= render 'devices_users_relations' %>
       <%end%>
       <!-- Fin listado histórico de usuarios -->
@@ -70,20 +74,27 @@
     <div class="col-3">
       <!-- Menú lateral -->
       <div class="mx-auto">
-        <%= go_back_link(devices_path) %>
-        <hr>
-        <%= button_to t('actions.edit'), edit_device_path, method: :get, class: 'btn btn-primary' %>
-        <br />
-        <%= button_to t('actions.delete'), device_path, method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>
-        <hr>
-        <% if @device.assigned? %>
-          <%= button_to t('devices.deassign_to_user'), deassign_device_path, method: :get, class: 'btn btn-primary' %>
-        <%else%>
-          <%= button_to t('devices.assign_to_user'), assign_device_path, method: :get, class: 'btn btn-primary' %>
+        <%= go_back_link(current_user_can?(controller_name, "index") ? devices_path : home_index_path) %>
+        <% if current_user_can?(controller_name, "edit") %>
+          <hr>
+          <%= button_to t('actions.edit'), edit_device_path, method: :get, class: 'btn btn-primary' %>
         <%end%>
-        <hr>
-        <%= button_to t('issues.create_issue'),  new_device_issue_path(@device), method: :get, class: 'btn btn-primary' %>
-        <br />
+        <% if current_user_can?(controller_name, "edit") %>
+          <br />
+          <%= button_to t('actions.delete'), device_path, method: :delete, class: 'btn btn-primary', data: {confirm: t('actions.confirm_question')} %>
+        <%end%>
+        <% if current_user_can?(controller_name, "assign") && current_user_can?(controller_name, "deassign") %>
+          <hr>
+          <% if @device.assigned? %>
+            <%= button_to t('devices.deassign_to_user'), deassign_device_path, method: :get, class: 'btn btn-primary' %>
+          <%else%>
+            <%= button_to t('devices.assign_to_user'), assign_device_path, method: :get, class: 'btn btn-primary' %>
+          <%end%>
+        <%end%>
+        <% if current_user_can?("issues", "new") %>
+          <hr>
+          <%= button_to t('issues.create_issue'),  new_device_issue_path(@device), method: :get, class: 'btn btn-primary' %>
+        <%end%>
       </div>
       <!-- Fin menú lateral -->
     </div>

@@ -29,6 +29,8 @@ es-ES:
     surname_1: "Apellido 1"
     surname_2: "Apellido 2"
     id_document_number: "NIF"
+  account:
+    success_updated: "Modificado correctamente"
   actions:
     new: "Nuevo"
     edit: "Editar"
@@ -44,6 +46,7 @@ es-ES:
     new: "Nuevo usuario"
     activate: "Usuario activado"
     deactivate: "Usuario desactivado"
+    success_updated: "Modificado correctamente"
   brands:
     new: "Nueva marca"
     models_count: "Número de modelos"
@@ -73,3 +76,9 @@ es-ES:
   trackings:
     new: "Nuevo seguimiento"
     trackings_list: "Seguimientos"
+  home:
+    devices_assigned_currently_to_you: "Dispositivos asignados actualmente a ti"
+    not_closed_issues: "Incidencias no cerradas"
+    edit_my_user: "Modificar mi usuario"
+    edit_account: "Modificar cuenta"
+

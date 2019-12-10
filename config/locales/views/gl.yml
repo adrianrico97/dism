@@ -29,6 +29,8 @@ gl:
     surname_1: "Apelido 1"
     surname_2: "Apelido 2"
     id_document_number: "NIF"
+  account:
+    success_updated: "Modificado correctamente"
   actions:
     new: "Novo"
     edit: "Editar"
@@ -44,6 +46,7 @@ gl:
     new: "Novo usuario"
     activate: "Usuario activado"
     deactivate: "Usuario desactivado"
+    success_updated: "Modificado correctamente"
   brands:
     new: "Nova marca"
     models_count: "Número de modelos"
@@ -73,3 +76,8 @@ gl:
   trackings:
     new: "Nuevo seguimiento"
     trackings_list: "Seguimentos"
+  home:
+    devices_assigned_currently_to_you: "Dispositivos asignados actualmente a ti"
+    not_closed_issues: "Incidencias non pechadas"
+    edit_my_user: "Modificar usuario"
+    edit_account: "Modificar conta"
