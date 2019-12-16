@@ -14,7 +14,7 @@ gl:
       screen: "Pantalla"
       mouse: "Rato"
       keyboard: "Teclado"
-      speakers: "Altofalanted"
+      speakers: "Altofalantes"
       network_electronics: "Electrónica de rede"
       other: "Outro"
     issue_states:

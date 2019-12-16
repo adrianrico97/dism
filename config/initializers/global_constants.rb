@@ -13,7 +13,7 @@ CATEGORIES = {
   :mouse => "mouse",
   :keyboard => "keyboard",
   :speakers => "speakers",
-  :network_electronics => "network_electronics"
+  :network_electronics => "network_electronics",
   :other => "other"
 }
 
