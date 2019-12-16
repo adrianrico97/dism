@@ -6,7 +6,15 @@ ROLES = {
 
 CATEGORIES = {
   :computer => "computer",
-  :phone => "phone"
+  :phone => "phone",
+  :mobile_phone => "mobile_phone",
+  :printer => "printer",
+  :screen => "screen",
+  :mouse => "mouse",
+  :keyboard => "keyboard",
+  :speakers => "speakers",
+  :network_electronics => "network_electronics"
+  :other => "other"
 }
 
 ISSUE_STATES = {

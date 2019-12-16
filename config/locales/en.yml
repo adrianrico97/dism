@@ -40,6 +40,14 @@ en:
     categories:
       computer: "Computer"
       phone: "Mobile phone"
+      mobile_phone: "Mobile phone"
+      printer: "Printer"
+      screen: "Screen"
+      mouse: "Mouse"
+      keyboard: "Keyboard"
+      speakers: "Speakers"
+      network_electronics: "Network electronics"
+      other: "Other"
     issue_states:
       open: "Open"
       in_progress: "In progress"

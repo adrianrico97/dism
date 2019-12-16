@@ -8,7 +8,15 @@ es-ES:
       basic: "Usuario básico"
     categories:
       computer: "Ordenador"
-      phone: "Móvil"
+      phone: "Teléfono"
+      mobile_phone: "Teléfono móvil"
+      printer: "Impresora"
+      screen: "Pantalla"
+      mouse: "Ratón"
+      keyboard: "Teclado"
+      speakers: "Altavoces"
+      network_electronics: "Electrónica de red"
+      other: "Otro"
     issue_states:
       open: "Abierta"
       in_progress: "En progreso"

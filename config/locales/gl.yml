@@ -8,7 +8,15 @@ gl:
       basic: "Usuario básico"
     categories:
       computer: "Ordenador"
-      phone: "Móbil"
+      phone: "Teléfono"
+      mobile_phone: "Teléfono móbil"
+      printer: "Impresora"
+      screen: "Pantalla"
+      mouse: "Rato"
+      keyboard: "Teclado"
+      speakers: "Altofalanted"
+      network_electronics: "Electrónica de rede"
+      other: "Outro"
     issue_states:
       open: "Aberta"
       in_progress: "En progreso"
