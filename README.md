@@ -7,7 +7,9 @@ DISM é unha plataforma que nos permite xestionar dunha forma sinxela ao inventa
 ### 1. Instalar RVM para o control das versións de Ruby
 
   `sudo apt-add-repository -y ppa:rael-gc/rvm`
+  
   `sudo apt-get update`
+
   `sudo apt-get install rvm`
 
 Máis información sobre a instalación de RVM: [https://github.com/rvm/ubuntu_rvm](https://github.com/rvm/ubuntu_rvm)
