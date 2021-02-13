@@ -47,3 +47,7 @@ Podemos iniciar unha consola co seguinte comando:
 
   rails console
 
+
+# Proxecto do CS Desenvolvemento de Aplicacións Web
+Este proxecto foi realizado no módulo de Proxecto de desenvolvemento de aplicacións web do Ciclo Superior de Desenvolvemento de aplicacións web.
+Ano 2019.
